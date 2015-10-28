@@ -8,11 +8,17 @@
       color: white;
     }
     h1{
+      font-size: 3em;
       color: #090F0F;
       background-color: rgb(99,232,216);
       padding: 20px;
     }
-
+    button{
+      padding: 5px;
+      font-size: 1.5em;
+      font: Arial;
+      border-radius: 5px;
+    }
   </style>
 </head>
 <body>
@@ -37,11 +43,10 @@
       <li>Once you enter your answer, JS will check if you enter anything. Emtpy answer is not accepted.</li>
       <li>JS will seek to confirm if you are happy with your answer. If you want to change your answer, click Cancel on the confirm box and it will bring you back to the answer prompt. If you are happy, just click OK</li>
       <li>JS will convert your answer to upper case. Then it will compare your answer against the answer keys stored in an array. If the two are strictly match, then JS will update the number of correct answers. If not, then JS will 'alert' you with a sorry message.</li>
-
     </ol>
   </dd>
-
 </dl>
+<button type="button" onclick="ask()"> Click here to play my game!</button>
 <script type="text/javascript" src="game.js"></script>
 </body>
 </html>
