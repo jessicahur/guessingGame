@@ -11,7 +11,7 @@ var thank;
 var i = 0;
 var answer;
 var sorry;
-var checking=true;
+var checking=false;
 
 var ask = function (){
   var name = prompt ("Please enter you name in the box below.");
@@ -27,9 +27,12 @@ var ask = function (){
     while (answer.length ===0){
       answer = prompt ("Please put answer yes (y) or no (n) for the question."+questions[i]);
     }
-    while (checking){
-      alert("Your answer")
+    checking = confirm("Your answer is "+answer+". If you want to change your answer, click Cancel to go back and input your answer again.");
+    while (checking===false){
+      answer = prompt(questions[i]);
+      checking = confirm("Your answer is "+answer+". If you want to change your answer, click Cancel to go back and input your answer again.");
     }
+
     answer = answer.toUpperCase();
     if (answer===keys[i][j] || answer===keys[i][j+1]){
       counter++;
