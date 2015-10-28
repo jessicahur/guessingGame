@@ -1,12 +1,5 @@
 //Part1: Asking for guess name and 'alert' a greeting
 var name;
-var name = prompt ("Please enter you name in the box below.");
-while (name.length===0){ //Make sure that name cannot be empty
-  name = prompt("Your name cannot be empty. Please enter your name in the box below.");
-}
-
-var greeting = "Nice meeting you "+name+"! Let's play a game. Please answer 3 questions about me using yes and no only.";
-alert(greeting);
 
 //Part2: Evaluating 3 questions
 var keys = [ ['YES','Y'], ['YES', 'Y'], ['YES', 'Y'] ];
@@ -21,6 +14,13 @@ var sorry;
 var checking=true;
 
 var ask = function (){
+  var name = prompt ("Please enter you name in the box below.");
+  while (name.length===0){ //Make sure that name cannot be empty
+    name = prompt("Your name cannot be empty. Please enter your name in the box below.");
+  }
+
+  var greeting = "Nice meeting you "+name+"! Let's play a game. Please answer 3 questions about me using yes and no only.";
+  alert(greeting);
   var j = 0;
   for (i = 0; i < questions.length; i++){
     answer = prompt(questions[i]);
