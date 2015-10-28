@@ -38,14 +38,16 @@ var ask = function (){
       counter++;
       congrats = "Congratulations "+name+"! You answered "+counter+" questions correctly!";
       console.log(congrats);
+      alert(congrats);
     }
     else{
       sorry = "Sorry "+name+". "+ans[i];
-      console.log(sorry)
+      console.log(sorry);
+      alert(sorry);
     }
   }
 
-  thank = "Thank you "+name+" for playing. You answered "+counter+" question(s) correctly.";
+  thank = "Thank you "+name+" for playing.";
   alert(thank);
 }
 ask();
