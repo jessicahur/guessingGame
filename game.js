@@ -36,13 +36,13 @@ var ask = function (){
     answer = answer.toUpperCase();
     if (answer===keys[i][j] || answer===keys[i][j+1]){
       counter++;
-      congrats = "Congratulations "+name+"! You answered "+counter+" questions correctly!";
-      console.log(congrats);
+      congrats = "Congratulations "+name+"! You answered "+counter+"/"+ans.length+" questions correctly!";
+      console.log("Your score is "+counter);
       alert(congrats);
     }
     else{
       sorry = "Sorry "+name+". "+ans[i];
-      console.log(sorry);
+      console.log("Your score is "+counter);
       alert(sorry);
     }
   }
@@ -50,4 +50,3 @@ var ask = function (){
   thank = "Thank you "+name+" for playing.";
   alert(thank);
 }
-ask();
