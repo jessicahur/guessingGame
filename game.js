@@ -12,6 +12,7 @@ var i = 0;
 var answer;
 var sorry;
 var checking=false;
+var answerArray = ["q1", "q2", "q3"];
 
 var ask = function (){
   var name = prompt ("Please enter you name in the box below.");
@@ -38,12 +39,17 @@ var ask = function (){
       counter++;
       congrats = "Congratulations "+name+"! You answered "+counter+"/"+ans.length+" questions correctly!";
       console.log("Your score is "+counter);
-      alert(congrats);
+      var message = document.getElementById(answerArray[i]);
+      message.innerHTML = congrats; 
+
+      //alert(congrats);
     }
     else{
       sorry = "Sorry "+name+". "+ans[i];
       console.log("Your score is "+counter);
-      alert(sorry);
+      var message = document.getElementById(answerArray[i]);
+      message.innerHTML = sorry;
+      //alert(sorry);
     }
   }
 
