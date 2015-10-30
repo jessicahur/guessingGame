@@ -37,11 +37,12 @@ var ask = function (){
     answer = answer.toUpperCase();
     if (answer===keys[i][j] || answer===keys[i][j+1]){
       counter++;
-      congrats = "Congratulations "+name+"! You answered "+counter+"/"+ans.length+" questions correctly!";
+      congrats = "Congratulations "+name+"! You answered "+counter+"/"+ans.length+" questions correctly!" +
+              '<img src="SmileyFace-100x100.gif">';
       console.log("Your score is "+counter);
       var message = document.getElementById(answerArray[i]);
       message.innerHTML = congrats;
-
+      message.className = "right";
       //alert(congrats);
     }
     else{
@@ -49,6 +50,7 @@ var ask = function (){
       console.log("Your score is "+counter);
       var message = document.getElementById(answerArray[i]);
       message.innerHTML = sorry;
+      message.className = "wrong";
       //alert(sorry);
     }
   }
