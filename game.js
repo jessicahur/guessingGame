@@ -40,7 +40,7 @@ var ask = function (){
       congrats = "Congratulations "+name+"! You answered "+counter+"/"+ans.length+" questions correctly!";
       console.log("Your score is "+counter);
       var message = document.getElementById(answerArray[i]);
-      message.innerHTML = congrats; 
+      message.innerHTML = congrats;
 
       //alert(congrats);
     }
